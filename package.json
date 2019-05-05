@@ -12,7 +12,7 @@
     "start:dev": "cross-env CHOKIDAR_USEPOLLING=true react-scripts start",
     "build": "react-scripts build",
     "test": "CI=true react-scripts test",
-    "test:dev": "cross-env CI=true react-scripts test",
+    "test:dev": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

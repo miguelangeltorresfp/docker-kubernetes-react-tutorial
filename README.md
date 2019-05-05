@@ -1,3 +1,25 @@
+
+# Docker and Kubernetes: The Complete Guide tutorial by Stephen Grider
+
+## DEV
+
+* Run the container from Dockerfile.dev
+`docker run -p 3000:3000 -v /$(pdw):/app <image-id>`
+
+* Run the container using the docker-compose.yml file
+
+`docker-compose up`
+`docker-compose up --build`
+
+## TESTS
+
+* Create another container which doesn't share the volume:
+
+`docker build -f Dockerfile.dev -t react-docker .`
+`docker run -it react-docker npm run test`
+
+* Reuse the existing dev container which share the volume previously created from docker-compose.yml: `docker exec -it <name or id> npm run test`
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
